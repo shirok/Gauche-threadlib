@@ -1,0 +1,18 @@
+Gauche-threadlib is a high-level thread library for Gauche Scheme.
+
+Writing multi-thread applications only with primitive functions is not
+easy because you have to deal with low-level things, like explicit
+synchronization or threads management.  This library abstructs such
+things so that writing multi-thread application become easier and
+error-prone.
+
+This is inspired by java.util.concurent, which is a standard library
+for Java.
+
+----
+
+[Shiro Kawai]: This library is originally written by Rui Ueyama.
+It has lots of good parts and I intend to incorporate most of them
+into Gauche core.  For the timing, I put the library here so that
+anybody interested can hack it.
+

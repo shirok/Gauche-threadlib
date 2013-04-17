@@ -1,0 +1,32 @@
+2009-01-12  Rui Ueyama  <rui314@gmail.com>
+		
+	* concurrent/executor.scm (make-thread-pool-executor,
+	  make-completion-service): Removed.
+
+2009-01-03  Rui Ueyama  <rui314@gmail.com>
+		
+	* concurrent/executor.scm, concurrent/barrier.scm,
+	  concurrent/blocking-queue.scm, concurrent/future.scm,
+	  concurrent/latch.scm: Fixed possible race condition.	
+	
+2009-01-02  Rui Ueyama  <rui314@gmail.com>
+		
+	* concurrent/future.scm (make-future): Added completion hook,
+	  which is invoked when the execution of the future is completed
+	  or cancelled.
+	* concurrent/barrier, concurrent/latch.scm: Added.
+	* concurrent/executor.scm: Rewrote as a clone of
+	  ThreadPoolExecutor class in Java.  Added <completion-service>.
+	* test.scm: Added tests.
+
+2008-12-30  Rui Ueyama  <rui314@gmail.com>
+		
+	* concurrent/executor.scm: Added.
+	* concurrent/util.scm: Created to hold common functions shared
+	  among this library.
+	* concurrent/blocking-queue.scm, concurrent/future.scm: Removed a
+	  common function to move it to util.scm.
+	
+;; Local Variables:
+;; coding: utf-8
+;; End:
